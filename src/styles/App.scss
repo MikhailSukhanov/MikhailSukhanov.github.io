@@ -1,0 +1,36 @@
+@use 'variables' as *;
+
+body {
+    background-color: rgb(32, 32, 32);
+}
+
+header {
+    text-align: center;
+    color: $text-main;
+
+    h1 {
+        font-size: 6rem;
+        margin: 35vh 0 2rem;
+    }
+        
+    nav ul {
+        display: flex;
+        margin: 0 auto;
+        // border: 1px solid red;
+        gap: 1rem;
+        width: fit-content;
+        font-size: 2rem;
+        
+        a {
+            color: $text-secondary;
+            transition: background-color 0.25s;
+            border-radius: 5px;
+            padding: 0.2rem 0.5rem;
+
+            &:hover {
+                color: $text-hover;
+                background-color: $bg-hover;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@use '../../styles/variables' as *;
+
+.container {
+    width: 35%;
+    margin: 0 auto;
+    
+    .link {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 0.7rem;
+
+        a {
+            font-size: 1.4rem;
+            color: $text-main;
+            text-decoration: none;
+            
+            
+            .icon {
+                width: 2rem;
+                filter: invert(100%);
+            }
+
+            &:not(:has(img)) {
+                transition: color 0.4s;
+
+                &:hover {
+                    color: $text-hover;
+                }
+            }
+        }
+    }
+}

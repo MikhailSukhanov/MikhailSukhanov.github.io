@@ -1,11 +1,17 @@
-import { NavLink, Outlet } from "react-router-dom";
-import ThemeAndLang from "../ThemeAndLang/ThemeAndLang";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import ThemeAndLang from "../ThemeAndLang/ThemeAndLang.tsx";
 
 function Root() {
+    const location = useLocation();
+    const isHomePage = location.pathname === '/'
+
     return <>
         <header>
-            <h1>Имя Фамилия</h1>
-            <nav>
+            <h1 data-home={isHomePage}>
+                {isHomePage ? 'Имя Фамилия' : <NavLink to="/">Имя Фамилия</NavLink>}
+            </h1>
+            <p data-home={isHomePage}>Frontend Developer | React • TypeScript • Redux • Node.js</p>
+            <nav data-home={isHomePage} className={isHomePage ? '' : 'fade-in'}>
                 <ul>
                     <li><NavLink to="/projects">Проекты</NavLink></li>
                     <li><NavLink to="/about">Обо мне</NavLink></li>

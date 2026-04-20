@@ -6,31 +6,102 @@ body {
 
 header {
     text-align: center;
-    color: $text-main;
-
+    margin-bottom: 3rem;
+    
     h1 {
-        font-size: 6rem;
-        margin: 35vh 0 2rem;
-    }
+        position: absolute;
+        font-weight: lighter;
+        transition: all 0.4s;
+        color: $text-main;
         
-    nav ul {
-        display: flex;
-        margin: 0 auto;
-        // border: 1px solid red;
-        gap: 1rem;
-        width: fit-content;
-        font-size: 2rem;
+        &[data-home=true] {
+            top: 38%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 6rem;
+            cursor: default;
+        }
+
+        &[data-home=false] {
+            top: 2rem;
+            left: 2rem;
+            font-size: 1.5rem;
+        }
         
         a {
-            color: $text-secondary;
-            transition: background-color 0.25s;
-            border-radius: 5px;
-            padding: 0.2rem 0.5rem;
+            color: $text-main;
+        }
+    }
 
-            &:hover {
-                color: $text-hover;
-                background-color: $bg-hover;
+    p {
+        position: absolute;
+        transition: all 0.4s;
+        color: $text-secondary;
+        font-style: italic;
+        font-size: 1rem;
+        cursor: default;
+
+        &[data-home=true] {
+            top: 49%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &[data-home=false] {
+            top: 3rem;
+            left: 2rem;
+            opacity: 0;
+            user-select: none;
+        }
+
+    }
+
+    nav {
+        scroll-margin-top: 1rem;
+        transition: all 0.4s;
+        width: fit-content;
+        margin: 0 auto;
+
+        &[data-home=true] {
+            transform: translateY(54vh);
+        }
+
+        &[data-home=false] {
+            margin-top: 2rem;
+        }
+
+        ul {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 2rem;
+            
+            a {
+                color: $text-secondary;
+                transition: all 0.2s;
+                border-radius: $border-radius-small;
+                padding: 0.2rem 0.6rem;
+    
+                &:hover, &.active {
+                    color: $text-hover;
+                    background-color: $bg-hover;
+                }
             }
         }
+    }
+}
+
+
+.fade-in {
+    animation: fadeIn ease 0.4s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    
+    100% {
+        opacity: 1;
     }
 }

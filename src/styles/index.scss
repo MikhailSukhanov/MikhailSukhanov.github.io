@@ -1,12 +1,14 @@
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body,
 h1, h2, h3, h4, p,
-ul, ol, li {
-  margin: 0;
-  padding: 0;
+ul, ol, li,
+button {
+    margin: 0;
+    padding: 0;
 }
 
 ul, ol {
@@ -14,5 +16,5 @@ ul, ol {
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }

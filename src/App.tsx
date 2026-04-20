@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './styles/App.scss';
 import Root from './components/Root/Root.tsx';

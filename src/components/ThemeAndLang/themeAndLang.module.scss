@@ -1,0 +1,32 @@
+@use '../../styles/variables' as *;
+
+.container {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    button {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.3rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        border: 1px solid $dark-border-color;
+        border-radius: $border-radius-small;
+
+        div {
+            width: 2.5rem;
+            padding: 0.3rem 0;
+            color: $text-main;
+            border-radius: $border-radius-small;
+            font-size: 0.8rem;
+
+            &.active {
+                color: $text-hover;
+                background-color: $bg-hover;
+            }
+        }
+    }
+}

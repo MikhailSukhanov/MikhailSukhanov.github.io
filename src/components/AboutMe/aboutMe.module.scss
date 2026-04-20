@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    color: $text-main;
+}
+
+.info-header {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: $text-hover;
+}
+
+.info-content {
+    margin-bottom: 3rem;
+}

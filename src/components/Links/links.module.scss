@@ -3,6 +3,7 @@
 .container {
     width: 35%;
     margin: 0 auto;
+    animation: $fade-in-animation;
     
     .link {
         display: flex;

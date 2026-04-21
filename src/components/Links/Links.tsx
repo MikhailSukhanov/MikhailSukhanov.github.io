@@ -4,7 +4,7 @@ function Links() {
     const githubLink = 'https://github.com/MikhailSukhanov';
     const kaggleLink = 'https://www.kaggle.com/mikhailsukhanov55/code';
 
-    return <main className={`${styles.container} fade-in`}>
+    return <main className={styles.container}>
         <div className={styles.link}>
             <a href={githubLink} target="_blank" rel="noopener noreferrer">
                 <img src="src/assets/github.svg" className={styles.icon}/>

@@ -3,7 +3,7 @@ import ThemeAndLang from "../ThemeAndLang/ThemeAndLang.tsx";
 
 function Root() {
     const location = useLocation();
-    const isHomePage = location.pathname === '/'
+    const isHomePage = location.pathname === '/';
 
     return <>
         <header>
@@ -11,7 +11,7 @@ function Root() {
                 {isHomePage ? 'Имя Фамилия' : <NavLink to="/">Имя Фамилия</NavLink>}
             </h1>
             <p data-home={isHomePage}>Frontend Developer | React • TypeScript • Redux • Node.js</p>
-            <nav data-home={isHomePage} className={isHomePage ? '' : 'fade-in'}>
+            <nav data-home={isHomePage}>
                 <ul>
                     <li><NavLink to="/projects">Проекты</NavLink></li>
                     <li><NavLink to="/about">Обо мне</NavLink></li>

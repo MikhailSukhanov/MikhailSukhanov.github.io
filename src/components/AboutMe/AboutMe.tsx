@@ -11,7 +11,7 @@ function AboutMe() {
         <Education key={edu.specialty + edu.year} degree={edu.degree} university={edu.university} year={edu.year} specialty={edu.specialty}/>
     ));
 
-    return <main className={`${styles.container} fade-in`}>
+    return <main className={styles.container}>
         <h2 className={styles['info-header']}>Опыт работы</h2>
         <div className={styles['info-content']}>{dispExperience}</div>
         <h2 className={styles['info-header']}>Образование</h2>

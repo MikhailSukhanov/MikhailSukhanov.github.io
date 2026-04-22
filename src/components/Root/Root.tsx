@@ -1,9 +1,10 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
+import type { Location } from "react-router-dom";
 import ThemeAndLang from "../ThemeAndLang/ThemeAndLang.tsx";
 
 function Root() {
-    const location = useLocation();
-    const isHomePage = location.pathname === '/';
+    const location: Location = useLocation();
+    const isHomePage: boolean = location.pathname === '/';
 
     return <>
         <header>

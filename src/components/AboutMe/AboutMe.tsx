@@ -4,12 +4,8 @@ import Education from '../Education/Education.tsx';
 import { experience, education } from '../../store/personalData.ts';
 
 function AboutMe() {
-    const dispExperience = experience.map(exp => (
-        <Experience key={exp.period} period={exp.period} organization={exp.organization} position={exp.position} responsibilities={exp.responsibilities}/>
-    ));
-    const dispEducation = education.map(edu => (
-        <Education key={edu.specialty + edu.year} degree={edu.degree} university={edu.university} year={edu.year} specialty={edu.specialty}/>
-    ));
+    const dispExperience = experience.map(exp => <Experience key={exp.period} {...exp}/>);
+    const dispEducation = education.map(edu => <Education key={edu.specialty + edu.year} {...edu}/>);
 
     return <main className={styles.container}>
         <h2 className={styles['info-header']}>Опыт работы</h2>

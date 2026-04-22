@@ -1,9 +1,7 @@
 import styles from './links.module.scss';
+import { githubLink, kaggleLink } from '../../store/personalData.ts';
 
 function Links() {
-    const githubLink: string = 'https://github.com/MikhailSukhanov';
-    const kaggleLink: string = 'https://www.kaggle.com/mikhailsukhanov55/code';
-
     return <main className={styles.container}>
         <a href={githubLink} target="_blank" rel="noopener noreferrer">
             <img src="src/assets/github.svg"/>

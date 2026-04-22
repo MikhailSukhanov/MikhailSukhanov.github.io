@@ -36,3 +36,7 @@ export const education: IEducation[] = [
         specialty: 'Управление в технических системах'
     }
 ];
+
+export const githubLink: string = 'https://github.com/MikhailSukhanov';
+export const kaggleLink: string = 'https://www.kaggle.com/mikhailsukhanov55/code';
+export const mail: string = 'MikhailSukhanov55@yandex.ru';

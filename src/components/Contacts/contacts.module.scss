@@ -1,0 +1,30 @@
+@use '../../styles/variables' as *;
+
+.container {
+    width: 35%;
+    margin: 0 auto;
+    animation: $fade-in-animation;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: $text-main;
+        transition: color 0.4s;
+        
+        .envelope {
+            width: 2rem;
+            filter: invert(100%);
+        }
+        
+        span {
+            font-size: 1.4rem;
+        }
+        
+        .clipboard {
+            width: 1.4rem;
+            filter: invert(50%);
+            cursor: pointer;
+        }
+    }
+}

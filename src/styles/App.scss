@@ -38,20 +38,21 @@ header {
         transition: all 0.4s;
         color: $text-secondary;
         font-style: italic;
-        font-size: 1rem;
         cursor: default;
-
+        
         &[data-home=true] {
+            font-size: 1rem;
             top: 49%;
             left: 50%;
             transform: translateX(-50%);
         }
 
         &[data-home=false] {
+            font-size: 0.25rem;
             top: 3rem;
             left: 2rem;
             opacity: 0;
-            user-select: none;
+            visibility: hidden;
         }
 
     }

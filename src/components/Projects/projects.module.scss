@@ -1,0 +1,15 @@
+@use '../../styles/variables' as *;
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    animation: $fade-in-animation;
+
+    aside {
+        border: 2px solid $dark-border-color;
+        border-radius: $border-radius-big;
+        padding: 1.2rem 2rem 1.2rem 1rem;
+        flex-shrink: 0;
+    }
+}

@@ -9,7 +9,10 @@ import Projects from './components/Projects/Projects.tsx';
 const router = createBrowserRouter([{
 	path: '/', element: <Root/>,
 	children: [
-		{path: '/projects', element: <Projects/>},
+		{
+			path: '/projects', element: <Projects/>,
+			children: []
+		},
 		{path: '/about', element: <AboutMe/>},
 		{path: '/links', element: <Links/>},
 		{path: '/contacts', element: <Contacts/>}

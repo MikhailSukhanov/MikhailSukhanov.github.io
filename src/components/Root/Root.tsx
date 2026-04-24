@@ -1,5 +1,4 @@
-import { NavLink, Outlet, useLocation } from "react-router-dom";
-import type { Location } from "react-router-dom";
+import { NavLink, Outlet, useLocation, type Location } from "react-router-dom";
 import ThemeAndLang from "../ThemeAndLang/ThemeAndLang.tsx";
 
 function Root() {

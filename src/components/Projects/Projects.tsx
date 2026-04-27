@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import ProjectsGroup from '../ProjectsGroup/ProjectsGroup.tsx';
+import ProjectsGroup from './ProjectsGroup/ProjectsGroup.tsx';
 import projects from '../../store/projects.ts';
 import styles from './projects.module.scss';
 

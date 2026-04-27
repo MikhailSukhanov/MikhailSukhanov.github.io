@@ -2,6 +2,8 @@ import styles from './contacts.module.scss';
 import { mail } from '../../store/personalData.ts';
 import { useAppDispatch, useAppSelector } from '../../store/store.ts';
 import { toggleMailCopied } from '../../store/slices/contactsSlice.ts';
+import { envelopeImg, checkImg, clipboardImg } from '../../assets';
+
 
 function Contacts() {
     const mailCopied: boolean = useAppSelector(state => state.contacts.mailCopied);
@@ -18,11 +20,11 @@ function Contacts() {
 
     return <main className={styles.container}>
         <div>
-            <img src="src/assets/envelope.svg" className={styles.envelope}/>
+            <img src={envelopeImg} className={styles.envelope}/>
             <span>{mail}</span>
             {mailCopied ? 
-                <img src="src/assets/check.svg" className={styles.clipboard}/> :
-                <img src="src/assets/clipboard.svg" className={styles.clipboard} onClick={() => copyToClipboard(mail)}/>
+                <img src={checkImg} className={styles.clipboard}/> :
+                <img src={clipboardImg} className={styles.clipboard} onClick={() => copyToClipboard(mail)}/>
             }
         </div>
     </main>;

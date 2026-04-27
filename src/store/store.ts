@@ -3,12 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import themeAndLangReducer from './slices/themeAndLangSlice.ts';
 import contactsReducer from './slices/contactsSlice.ts';
 import projectsReducer from './slices/projectsSlice.ts';
+import calculatorReducer from './slices/calculatorSlice.ts';
 
 const store = configureStore({
     reducer: {
         themeAndLang: themeAndLangReducer,
         contacts: contactsReducer,
-        projects: projectsReducer
+        projects: projectsReducer,
+        calculator: calculatorReducer
     }
 });
 

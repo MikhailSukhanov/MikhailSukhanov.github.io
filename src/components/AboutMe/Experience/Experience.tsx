@@ -1,8 +1,9 @@
-import { type IExperience } from "../../store/personalData.ts";
+import { Fragment } from 'react';
+import { type IExperience } from '../../../store/personalData.ts';
 import styles from './experience.module.scss';
 
 function Experience({period, organization, position, responsibilities}: IExperience) {
-    const dispResps = responsibilities.map(resp => <>{resp}<br/></>);
+    const dispResps = responsibilities.map((resp, ind) => <Fragment key={ind}>{resp}<br/></Fragment>);
 
     return <div className={styles.container}>
         <p><span>Период работы:</span> {period}</p>

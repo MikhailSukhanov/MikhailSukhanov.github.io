@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use '../../../styles/variables' as *;
 
 .container {
     &:not(:last-child) {
@@ -13,12 +13,12 @@
         color: $text-secondary;
         transition: color 0.4s;
         cursor: pointer;
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.5rem;
         
         img {
             width: 1.3rem;
             filter: invert(50%);
-            transition: filter 0.4s;
+            transition: all 0.4s;
         }
 
         &:hover, &[data-active=true] {
@@ -50,8 +50,8 @@
                 font-size: 1.6rem;
                 cursor: pointer;
                 border-radius: $border-radius-small;
-                margin-bottom: 0.4rem;
-                padding: 0.2rem 0.6rem;
+                margin-bottom: 0.5rem;
+                padding: 0.3rem 0.6rem;
                 transition: background-color 0.2s;
     
                 a {

@@ -1,6 +1,6 @@
 import styles from './aboutMe.module.scss';
-import Experience from '../Experience/Experience.tsx';
-import Education from '../Education/Education.tsx';
+import Experience from './Experience/Experience.tsx';
+import Education from './Education/Education.tsx';
 import { experience, education } from '../../store/personalData.ts';
 
 function AboutMe() {

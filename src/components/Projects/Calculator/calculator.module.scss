@@ -1,0 +1,60 @@
+@use '../../../styles/variables' as *;
+
+.container {
+    border-radius: $border-radius-big;
+    padding: 2rem;
+    color: $text-main;
+    animation: $fade-in-project-animation;
+    background-color: $dark-color1;
+    border: 1px solid $dark-color3;
+
+    .result {
+        color: $text-secondary;
+        height: 1.5rem;
+        font-size: 1.2rem;
+        text-align: right;
+        margin-bottom: 0.5rem;
+    }
+
+    input {
+        color: $text-main;
+        font-size: 1.4rem;
+        border: none;
+        background: none;
+        text-align: right;
+        margin-bottom: 0.5rem;
+        outline: none;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-rows: repeat(5, 2rem);
+        grid-template-columns: repeat(5, 3rem);
+        row-gap: 0.5rem;
+        justify-content: space-between;
+        
+
+        button {
+            font-size: 1.2rem;
+            color: $text-main;
+            padding: 0;
+            border-radius: $border-radius-small;
+            border: none;
+            cursor: pointer;
+            background-color: $dark-color3;
+            transition: transform 0.1s;
+
+            &:active {
+                transform: translateY(4%);
+            }
+
+            &[data-type=operator] {
+                background-color: $dark-color4;
+            }
+
+            &[data-type=equals] {
+                background-color: $dark-color5;
+            }
+        }
+    }
+}

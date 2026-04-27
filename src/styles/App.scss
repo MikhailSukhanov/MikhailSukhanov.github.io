@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 body {
-    background-color: rgb(32, 32, 32);
+    background-color: $dark-color2;
 }
 
 header {

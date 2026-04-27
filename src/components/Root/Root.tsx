@@ -1,9 +1,13 @@
-import { NavLink, Outlet, useLocation, type Location } from "react-router-dom";
-import ThemeAndLang from "../ThemeAndLang/ThemeAndLang.tsx";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { useAppSelector } from "../../store/store.ts";
+import { getProjectPathFromId } from "../../store/projects.ts";
+import ThemeAndLang from '../ThemeAndLang/ThemeAndLang.tsx';
 
 function Root() {
-    const location: Location = useLocation();
+    const location = useLocation();
     const isHomePage: boolean = location.pathname === '/';
+    const selectedProjectId: string | null = useAppSelector(state => state.projects.selectedProjectId);
+    const projectsPath: string = selectedProjectId ? getProjectPathFromId(selectedProjectId) : '/projects';
 
     return <>
         <header>
@@ -13,7 +17,7 @@ function Root() {
             <p data-home={isHomePage}>Frontend Developer | React • TypeScript • Redux • Node.js</p>
             <nav data-home={isHomePage}>
                 <ul>
-                    <li><NavLink to="/projects">Проекты</NavLink></li>
+                    <li><NavLink to={projectsPath}>Проекты</NavLink></li>
                     <li><NavLink to="/about">Обо мне</NavLink></li>
                     <li><NavLink to="/links">Ссылки</NavLink></li>
                     <li><NavLink to="/contacts">Контакты</NavLink></li>

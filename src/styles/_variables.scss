@@ -2,12 +2,17 @@ $text-main: rgb(245, 245, 245);
 $text-secondary: rgb(150, 150, 150);
 $text-hover: rgb(255, 152, 0);
 $bg-hover: rgba(255, 152, 0, 0.15);
-$dark-border-color: rgb(51, 51, 51);
+$dark-color1: rgb(26, 26, 26);
+$dark-color2: rgb(32, 32, 32);
+$dark-color3: rgb(51, 51, 51);
+$dark-color4: rgb(68, 68, 68);
+$dark-color5: rgba(255, 152, 0, 0.4);
 
 $border-radius-big: 0.8rem;
 $border-radius-small: 0.4rem;
 
 $fade-in-animation: fade-in ease-out 0.4s;
+$fade-in-project-animation: fade-in-project 0.4s;
 
 @mixin about-me-section {
     line-height: 1.3;
@@ -25,6 +30,16 @@ $fade-in-animation: fade-in ease-out 0.4s;
     0% {
         opacity: 0;
         transform: translateY(3rem);
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-project {
+    0% {
+        opacity: 0;
     }
     
     100% {

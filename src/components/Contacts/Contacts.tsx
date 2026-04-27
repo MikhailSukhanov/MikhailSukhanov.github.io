@@ -1,7 +1,7 @@
 import styles from './contacts.module.scss';
 import { mail } from '../../store/personalData.ts';
 import { useAppDispatch, useAppSelector } from '../../store/store.ts';
-import { toggleMailCopied } from '../../store/slices/contactsSlice.ts';
+import { toggleMailCopied } from '../../store/slices';
 import { envelopeImg, checkImg, clipboardImg } from '../../assets';
 
 

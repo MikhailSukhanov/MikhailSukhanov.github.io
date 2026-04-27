@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styles from './projectsGroup.module.scss';
 import { useAppDispatch, useAppSelector } from '../../../store/store.ts';
-import { setSelectedProjectId, toggleSelectedGroupId } from '../../../store/slices/projectsSlice.ts';
+import { setSelectedProjectId, toggleSelectedGroupId } from '../../../store/slices';
 import { type IProjectsGroup } from '../../../store/projects.ts';
 import { angleBracketImg } from '../../../assets';
 

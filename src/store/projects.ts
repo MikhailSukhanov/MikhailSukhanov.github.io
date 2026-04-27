@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { useAppDispatch, useAppSelector } from './store.ts';
-import { setSelectedProjectId, toggleSelectedGroupId } from './slices/projectsSlice.ts';
+import { setSelectedProjectId, toggleSelectedGroupId } from './slices';
 
 interface IProject {
     id: string,

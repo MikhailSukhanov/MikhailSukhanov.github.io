@@ -2,7 +2,7 @@ import { evaluate, round } from 'mathjs';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from './calculator.module.scss';
-import {setMathExp, addCharToMathExp} from '../../../store/slices/calculatorSlice.ts';
+import { setMathExp, addCharToMathExp } from '../../../store/slices';
 import { useDirectProjectLink } from '../../../store/projects.ts';
 import { useAppDispatch, useAppSelector } from '../../../store/store.ts';
 

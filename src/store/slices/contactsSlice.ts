@@ -19,4 +19,4 @@ const contactsSlice = createSlice({
 });
 
 export default contactsSlice.reducer;
-export const { toggleMailCopied } = contactsSlice.actions;
+export const {toggleMailCopied} = contactsSlice.actions;

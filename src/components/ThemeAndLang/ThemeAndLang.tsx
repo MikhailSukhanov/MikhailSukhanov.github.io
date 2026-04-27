@@ -1,6 +1,6 @@
 import styles from './themeAndLang.module.scss';
 import { useAppDispatch, useAppSelector } from '../../store/store.ts';
-import { toggleTheme, toggleLanguage } from '../../store/slices/themeAndLangSlice.ts';
+import { toggleTheme, toggleLanguage } from '../../store/slices';
 
 function ThemeAndLang() {
     const theme = useAppSelector(state => state.themeAndLang.theme);

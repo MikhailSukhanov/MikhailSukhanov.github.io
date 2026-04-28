@@ -1,0 +1,103 @@
+@use '../../../styles/variables' as *;
+
+$nav-left-space: calc(0.7rem + 10px);
+
+.container {
+    display: flex;
+    gap: 2rem;
+    border-radius: $border-radius-big;
+    padding: 2rem 2rem 2rem calc(2.5rem - $nav-left-space);
+    height: 28.2rem;
+    color: $text-main;
+    animation: $fade-in-project-animation;
+    background-color: $dark-color1;
+    border: 1px solid $dark-color3;
+    width: 40rem;
+
+    .navigation {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 12rem;
+        flex-grow: 0;
+
+        .search-field {
+            position: relative;
+            margin-left: $nav-left-space;
+
+            input {
+                background-color: $dark-color4;
+                border-radius: $border-radius-small;
+                color: $text-main;
+                padding: 0.3rem 0.5rem;
+                font-size: 1rem;
+                border: none;
+                outline: none;
+                width: 100%;
+            }
+
+            button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0.5rem;
+                cursor: pointer;
+                background: none;
+                border: none;
+                font-size: 1rem;
+                color: black;
+            }
+
+        }
+
+        .notes {
+            flex-grow: 1;
+            overflow-y: auto;
+            direction: rtl;
+            scrollbar-width: thin;
+            scrollbar-color: $dark-color3 transparent;
+            padding-left: 0.7rem;
+            scrollbar-gutter: stable;
+
+            & > * {
+                direction: ltr;
+            }
+
+            &::-webkit-scrollbar-button {
+                display: none;
+                width: 0;
+                height: 0;
+            }
+        }
+
+        .add-btn {
+            background-color: $dark-color5;
+            color: $text-main;
+            font-size: 1.2rem;
+            margin-left: $nav-left-space;
+            padding: 0.3rem 0.5rem;
+            border: none;
+            border-radius: $border-radius-small;
+            cursor: pointer;
+            transition: opacity 0.1s;
+
+            &:active {
+                opacity: 0.9;
+            }
+        }
+    }
+
+    textarea {
+        color: $text-main;
+        background-color: $dark-color4;
+        flex-grow: 1;
+        resize: none;
+        height: 100%;
+        font-size: 1.2rem;
+        border: none;
+        outline: none;
+        border-radius: $border-radius-small;
+        padding: 1rem;
+    }
+}

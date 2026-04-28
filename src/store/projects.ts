@@ -20,7 +20,7 @@ const projects: IProjectsGroup[] = [
         groupName: 'Инструменты',
         projects: [
             {id: '1.1', name: 'Калькулятор', path: '/projects/calculator'},
-            {id: '1.2', name: 'Инструмент 2', path: '/projects/tool2'}
+            {id: '1.2', name: 'Блокнот', path: '/projects/notepad'}
         ]
     },
     {

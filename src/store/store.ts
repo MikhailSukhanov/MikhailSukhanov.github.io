@@ -4,7 +4,8 @@ import {
     themeAndLangReducer,
     contactsReducer,
     projectsReducer,
-    calculatorReducer
+    calculatorReducer,
+    notepadReducer
 } from './slices';
 
 const store = configureStore({
@@ -12,7 +13,8 @@ const store = configureStore({
         themeAndLang: themeAndLangReducer,
         contacts: contactsReducer,
         projects: projectsReducer,
-        calculator: calculatorReducer
+        calculator: calculatorReducer,
+        notepad: notepadReducer
     }
 });
 

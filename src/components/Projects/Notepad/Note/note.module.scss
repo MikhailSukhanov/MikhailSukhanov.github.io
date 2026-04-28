@@ -1,0 +1,47 @@
+@use '../../../../styles/variables' as *;
+
+.container {
+    position: relative;
+    padding: 0.8rem 1.8rem 0.8rem 0.8rem;
+    height: 4rem;
+    border-radius: $border-radius-small;
+    flex-shrink: 0;
+    overflow-wrap: break-word;
+    background-color: $dark-color3;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    
+    &[data-active=true] {
+        background-color: $bg-hover;
+
+        p {
+            color: $text-hover;
+        }
+    }
+    
+    &:not(:last-child) {
+        margin-bottom: 0.8rem;
+    }
+    
+    button {
+        position: absolute;
+        top: 0.2rem;
+        right: 0.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: color 0.1s;
+        color: black;
+
+        &:hover {
+            color: $text-main;
+        }
+    }
+    
+    p {
+        color: $text-main;
+        font-size: 1rem;
+        transition: color 0.1s;
+    }
+}

@@ -1,10 +1,11 @@
 import { useLocation } from 'react-router-dom';
-import { useEffect, useRef, type ChangeEvent } from 'react';
+import { useState, useEffect, useRef, type ChangeEvent } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../store/store.ts';
 import { addNote, editNote, setSearchField } from '../../../store/slices';
 import { useDirectProjectLink } from '../../../store/projects.ts';
 import styles from './notepad.module.scss';
 import Note from './Note/Note.tsx';
+import { magnifierImg } from '../../../assets';
 
 function Notepad() {
     function getSelectedText(noteId: string | null): string {
@@ -39,6 +40,7 @@ function Notepad() {
         });
     }
 
+    const [isFocused, setIsFocused] = useState<boolean>(false);
     const location = useLocation();
     const dispatch = useAppDispatch();
     const setProjectIdsFromDirectLink = useDirectProjectLink();
@@ -69,8 +71,14 @@ function Notepad() {
     return <div className={styles.container}>
         <div className={styles.navigation}>
             <div className={styles['search-field']}>
-                <input onChange={e => dispatch(setSearchField(e.target.value))} value={notepadState.searchField} placeholder="Поиск"/>
-                <button onClick={() => dispatch(setSearchField(''))}>⨯</button>
+                <input
+                    onChange={e => dispatch(setSearchField(e.target.value))}
+                    value={notepadState.searchField}
+                    onFocus={() => setIsFocused(true)}
+                    onBlur={() => setIsFocused(false)}
+                />
+                {(!isFocused && notepadState.searchField === '') && <img src={magnifierImg}/>}
+                <button onMouseDown={e => {e.preventDefault(); dispatch(setSearchField(''))}}>⨯</button>
             </div>
             <div ref={notesListRef} className={styles.notes}>{dispNotes}</div>
             <button onClick={handleAddClick} className={styles['add-btn']}>Добавить</button>

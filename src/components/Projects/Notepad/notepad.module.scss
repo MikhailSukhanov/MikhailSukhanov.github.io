@@ -30,11 +30,20 @@ $nav-left-space: calc(0.7rem + 10px);
                 background-color: $dark-color4;
                 border-radius: $border-radius-small;
                 color: $text-main;
-                padding: 0.3rem 0.5rem;
+                padding: 0.3rem 1.7rem 0.3rem 0.5rem;
                 font-size: 1rem;
                 border: none;
                 outline: none;
                 width: 100%;
+            }
+
+            img {
+                width: 0.7rem;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0.5rem;
+                pointer-events: none;
             }
 
             button {

@@ -12,19 +12,19 @@
         background: none;
         cursor: pointer;
         margin-bottom: 1rem;
-        border: 1px solid $dark-color3;
+        border: 1px solid var(--color3);
         border-radius: $border-radius-small;
 
         div {
             width: 2.5rem;
             padding: 0.3rem 0;
-            color: $text-main;
+            color: var(--text-main);
             border-radius: $border-radius-small;
             font-size: 0.8rem;
 
             &.active {
-                color: $text-hover;
-                background-color: $bg-hover;
+                color: var(--text-hover);
+                background-color: var(--bg-hover);
             }
         }
     }

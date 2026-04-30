@@ -3,14 +3,14 @@
 .container {
     width: 50%;
     margin: 0 auto;
-    color: $text-main;
+    color: var(--text-main);
     animation: $fade-in-animation;
 }
 
 .info-header {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: $text-hover;
+    color: var(--text-hover);
 }
 
 .info-content {

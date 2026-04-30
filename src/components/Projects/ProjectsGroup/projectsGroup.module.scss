@@ -10,22 +10,22 @@
         align-items: center;
         gap: 0.6rem;
         font-size: 1.8rem;
-        color: $text-secondary;
+        color: var(--text-secondary);
         transition: color 0.4s;
         cursor: pointer;
         margin-bottom: 0.5rem;
         
         img {
             width: 1.3rem;
-            filter: invert(50%);
+            filter: invert(var(--arrow-invert));
             transition: all 0.4s;
         }
 
         &:hover, &[data-active=true] {
-            color: $text-main;
+            color: var(--text-main);
 
             img {
-                filter: invert(100%);
+                filter: invert(var(--arrow-active-invert));
             }
         }
 
@@ -56,15 +56,15 @@
     
                 a {
                     text-decoration: none;
-                    color: $text-main;
+                    color: var(--text-main);
                     transition: color 0.2s;
                 }
     
                 &:hover, &[data-active=true] {
-                    background-color: $bg-hover;  
+                    background-color: var(--bg-hover);  
                     
                     a {
-                        color: $text-hover;
+                        color: var(--text-hover);
                     }
                 }
             }

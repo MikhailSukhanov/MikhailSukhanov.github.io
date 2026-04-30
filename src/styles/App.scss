@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 body {
-    background-color: $dark-color2;
+    background-color: var(--color2);
 }
 
 header {
@@ -12,7 +12,7 @@ header {
         position: absolute;
         font-weight: lighter;
         transition: all 0.4s;
-        color: $text-main;
+        color: var(--text-main);
         
         &[data-home=true] {
             top: 38%;
@@ -29,14 +29,14 @@ header {
         }
         
         a {
-            color: $text-main;
+            color: var(--text-main);
         }
     }
 
     p {
         position: absolute;
         transition: all 0.4s;
-        color: $text-secondary;
+        color: var(--text-secondary);
         font-style: italic;
         cursor: default;
         
@@ -77,14 +77,14 @@ header {
             font-size: 2rem;
             
             a {
-                color: $text-secondary;
+                color: var(--text-secondary);
                 transition: all 0.2s;
                 border-radius: $border-radius-small;
                 padding: 0.2rem 0.6rem;
     
                 &:hover, &.active {
-                    color: $text-hover;
-                    background-color: $bg-hover;
+                    color: var(--text-hover);
+                    background-color: var(--bg-hover);
                 }
             }
         }

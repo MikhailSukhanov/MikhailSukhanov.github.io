@@ -13,17 +13,17 @@
 
         img {
             width: 2rem;
-            filter: invert(100%);
+            filter: invert(var(--icon-invert));
         }
 
         span {
             font-size: 1.4rem;
-            color: $text-main;
+            color: var(--text-main);
             text-decoration: none;
             transition: color 0.4s;
             
             &:hover {
-                color: $text-hover;
+                color: var(--text-hover);
             }
         }
     }

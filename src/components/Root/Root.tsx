@@ -1,13 +1,19 @@
-import { NavLink, Outlet, useLocation } from "react-router-dom";
-import { useAppSelector } from "../../store/store.ts";
-import { getProjectPathFromId } from "../../store/projects.ts";
+import { useEffect } from 'react';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { useAppSelector } from '../../store/store.ts';
+import { getProjectPathFromId } from '../../store/projects.ts';
 import ThemeAndLang from '../ThemeAndLang/ThemeAndLang.tsx';
 
 function Root() {
     const location = useLocation();
     const isHomePage: boolean = location.pathname === '/';
     const selectedProjectId: string | null = useAppSelector(state => state.projects.selectedProjectId);
+    const theme: string = useAppSelector(state => state.themeAndLang.theme);
     const projectsPath: string = selectedProjectId ? getProjectPathFromId(selectedProjectId) : '/projects';
+
+    useEffect(() => {
+        document.body.dataset.theme = theme;
+    }, [theme]);
 
     return <>
         <header>

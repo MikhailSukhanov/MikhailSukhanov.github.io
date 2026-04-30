@@ -7,15 +7,15 @@
     border-radius: $border-radius-small;
     flex-shrink: 0;
     overflow-wrap: break-word;
-    background-color: $dark-color3;
+    background-color: var(--color3);
     cursor: pointer;
     transition: background-color 0.1s;
     
     &[data-active=true] {
-        background-color: $bg-hover;
+        background-color: var(--bg-hover);
 
         p {
-            color: $text-hover;
+            color: var(--text-hover);
         }
     }
     
@@ -35,12 +35,12 @@
         color: black;
 
         &:hover {
-            color: $text-main;
+            color: var(--text-main);
         }
     }
     
     p {
-        color: $text-main;
+        color: var(--text-main);
         font-size: 1rem;
         transition: color 0.1s;
     }

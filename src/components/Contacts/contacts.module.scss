@@ -9,12 +9,12 @@
         display: flex;
         align-items: center;
         gap: 0.6rem;
-        color: $text-main;
+        color: var(--text-main);
         transition: color 0.4s;
         
         .envelope {
             width: 2rem;
-            filter: invert(100%);
+            filter: invert(var(--icon-invert));
         }
         
         span {
@@ -23,7 +23,7 @@
         
         .clipboard {
             width: 1.4rem;
-            filter: invert(60%);
+            filter: invert(var(--clipboard-invert));
             cursor: pointer;
         }
     }

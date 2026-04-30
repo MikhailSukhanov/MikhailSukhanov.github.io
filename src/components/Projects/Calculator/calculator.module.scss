@@ -3,13 +3,13 @@
 .container {
     border-radius: $border-radius-big;
     padding: 2rem;
-    color: $text-main;
+    color: var(--text-main);
     animation: $fade-in-project-animation;
-    background-color: $dark-color1;
-    border: 1px solid $dark-color3;
+    background-color: var(--color1);
+    border: 1px solid var(--color3);
 
     .result {
-        color: $text-secondary;
+        color: var(--text-secondary);
         height: 1.5rem;
         font-size: 1.2rem;
         text-align: right;
@@ -17,7 +17,7 @@
     }
 
     input {
-        color: $text-main;
+        color: var(--text-main);
         font-size: 1.4rem;
         border: none;
         background: none;
@@ -37,12 +37,12 @@
 
         button {
             font-size: 1.2rem;
-            color: $text-main;
+            color: var(--text-main);
             padding: 0;
             border-radius: $border-radius-small;
             border: none;
             cursor: pointer;
-            background-color: $dark-color3;
+            background-color: var(--color3);
             transition: transform 0.1s;
 
             &:active {
@@ -50,11 +50,11 @@
             }
 
             &[data-type=operator] {
-                background-color: $dark-color4;
+                background-color: var(--color4);
             }
 
             &[data-type=equals] {
-                background-color: $dark-color5;
+                background-color: var(--color5);
             }
         }
     }

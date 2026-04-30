@@ -8,10 +8,10 @@ $nav-left-space: calc(0.7rem + 10px);
     border-radius: $border-radius-big;
     padding: 2rem 2rem 2rem calc(2.5rem - $nav-left-space);
     height: 28.2rem;
-    color: $text-main;
+    color: var(--text-main);
     animation: $fade-in-project-animation;
-    background-color: $dark-color1;
-    border: 1px solid $dark-color3;
+    background-color: var(--color1);
+    border: 1px solid var(--color3);
     width: 40rem;
 
     .navigation {
@@ -27,9 +27,9 @@ $nav-left-space: calc(0.7rem + 10px);
             margin-left: $nav-left-space;
 
             input {
-                background-color: $dark-color4;
+                background-color: var(--color4);
                 border-radius: $border-radius-small;
-                color: $text-main;
+                color: var(--text-main);
                 padding: 0.3rem 1.7rem 0.3rem 0.5rem;
                 font-size: 1rem;
                 border: none;
@@ -65,7 +65,7 @@ $nav-left-space: calc(0.7rem + 10px);
             overflow-y: auto;
             direction: rtl;
             scrollbar-width: thin;
-            scrollbar-color: $dark-color3 transparent;
+            scrollbar-color: var(--color3) transparent;
             padding-left: 0.7rem;
             scrollbar-gutter: stable;
 
@@ -81,8 +81,8 @@ $nav-left-space: calc(0.7rem + 10px);
         }
 
         .add-btn {
-            background-color: $dark-color5;
-            color: $text-main;
+            background-color: var(--color5);
+            color: var(--text-main);
             font-size: 1.2rem;
             margin-left: $nav-left-space;
             padding: 0.3rem 0.5rem;
@@ -98,8 +98,8 @@ $nav-left-space: calc(0.7rem + 10px);
     }
 
     textarea {
-        color: $text-main;
-        background-color: $dark-color4;
+        color: var(--text-main);
+        background-color: var(--color4);
         flex-grow: 1;
         resize: none;
         height: 100%;

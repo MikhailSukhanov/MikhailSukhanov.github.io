@@ -6,6 +6,7 @@ import { useDirectProjectLink } from '../../../store/projects.ts';
 import styles from './notepad.module.scss';
 import Note from './Note/Note.tsx';
 import { magnifierImg } from '../../../assets';
+import { useLanguage } from '../../../store/context/LanguageContext.ts';
 
 function Notepad() {
     function getSelectedText(noteId: string | null): string {
@@ -46,6 +47,7 @@ function Notepad() {
     const setProjectIdsFromDirectLink = useDirectProjectLink();
     const textareaRef = useRef<HTMLTextAreaElement>(null);
     const notesListRef = useRef<HTMLDivElement>(null);
+    const lang = useLanguage();
 
     const notepadState = useAppSelector(state => state.notepad);
     const dispNotes = notepadState.notes
@@ -81,7 +83,7 @@ function Notepad() {
                 <button onMouseDown={e => {e.preventDefault(); dispatch(setSearchField(''))}}>⨯</button>
             </div>
             <div ref={notesListRef} className={styles.notes}>{dispNotes}</div>
-            <button onClick={handleAddClick} className={styles['add-btn']}>Добавить</button>
+            <button onClick={handleAddClick} className={styles['add-btn']}>{lang === 'ru' ? 'Добавить' : 'Add'}</button>
         </div>
         <textarea
             ref={textareaRef}

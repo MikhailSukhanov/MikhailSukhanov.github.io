@@ -1,34 +1,35 @@
 import { useRef } from 'react';
 import { useAppDispatch, useAppSelector } from './store.ts';
 import { setSelectedProjectId, toggleSelectedGroupId } from './slices';
+import { type ILanguages } from './personalData.ts'; 
 
 interface IProject {
     id: string,
-    name: string,
+    name: ILanguages,
     path: string
 }
 
 export interface IProjectsGroup {
     groupId: string,
-    groupName: string,
+    groupName: ILanguages,
     projects: IProject[]
 }
 
 const projects: IProjectsGroup[] = [
     {
         groupId: '1',
-        groupName: 'Инструменты',
+        groupName: {ru: 'Инструменты', en: 'Tools'},
         projects: [
-            {id: '1.1', name: 'Калькулятор', path: '/projects/calculator'},
-            {id: '1.2', name: 'Блокнот', path: '/projects/notepad'}
+            {id: '1.1', name: {ru: 'Калькулятор', en: 'Calculator'}, path: '/projects/calculator'},
+            {id: '1.2', name: {ru: 'Блокнот', en: 'Notepad'}, path: '/projects/notepad'}
         ]
     },
     {
         groupId: '2',
-        groupName: 'Игры',
+        groupName: {ru: 'Игры', en: 'Games'},
         projects: [
-            {id: '2.1', name: 'Игра 1', path: '/projects/game1'},
-            {id: '2.2', name: 'Игра 2', path: '/projects/game2'}
+            {id: '2.1', name: {ru: 'Игра 1', en: 'Game 1'}, path: '/projects/game1'},
+            {id: '2.2', name: {ru: 'Игра 2', en: 'Game 2'}, path: '/projects/game2'}
         ]
     }
 ];

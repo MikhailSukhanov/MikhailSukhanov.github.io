@@ -1,15 +1,19 @@
 import { Fragment } from 'react';
-import { type IExperience } from '../../../store/personalData.ts';
+import { type IExperience, type ILanguages } from '../../../store/personalData.ts';
 import styles from './experience.module.scss';
 
-function Experience({period, organization, position, responsibilities}: IExperience) {
-    const dispResps = responsibilities.map((resp, ind) => <Fragment key={ind}>{resp}<br/></Fragment>);
+interface IExperienceProps extends IExperience {
+    lang: keyof ILanguages
+}
+
+function Experience({period, organization, position, responsibilities, lang}: IExperienceProps) {
+    const dispResps = responsibilities.map((resp, ind) => <Fragment key={ind}>{resp[lang]}<br/></Fragment>);
 
     return <div className={styles.container}>
-        <p><span>Период работы:</span> {period}</p>
-        <p><span>Организация:</span> {organization}</p>
-        <p><span>Должность:</span> {position}</p>
-        <p><span>Обязанности и достижения:</span> {dispResps}</p>
+        <p><span>{lang === 'ru' ? 'Период работы:' : 'Working period:'}</span> {period[lang]}</p>
+        <p><span>{lang === 'ru' ? 'Организация:' : 'Organization:'}</span> {organization[lang]}</p>
+        <p><span>{lang === 'ru' ? 'Должность:' : 'Position:'}</span> {position[lang]}</p>
+        <p><span>{lang === 'ru' ? 'Обязанности и достижения:' : 'Responsibilities and achievements:'}</span> {dispResps}</p>
     </div>
 }
 

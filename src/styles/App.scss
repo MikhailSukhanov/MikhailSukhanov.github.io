@@ -8,54 +8,61 @@ header {
     text-align: center;
     margin-bottom: 3rem;
     
-    h1 {
+    .title {
         position: absolute;
-        font-weight: lighter;
         transition: all 0.4s;
-        color: var(--text-main);
-        
+
         &[data-home=true] {
             top: 38%;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 6rem;
-            cursor: default;
+
+            h1 {
+                font-size: 6rem;
+                cursor: default;
+
+            }
+
+            p {
+                font-size: 1rem;
+                opacity: 1;
+            }
         }
 
         &[data-home=false] {
             top: 2rem;
             left: 2rem;
-            font-size: 1.5rem;
+
+            h1 {
+                font-size: 1.5rem;
+
+                a {
+                    color: var(--text-main);
+                }
+            }
+
+            p {
+                font-size: 0.25rem;
+                opacity: 0;
+                visibility: hidden;
+            }
         }
-        
-        a {
+
+        h1 {
+            font-weight: lighter;
             color: var(--text-main);
+            white-space: nowrap;
+            transition: all 0.4s;
+        }
+    
+        p {
+            color: var(--text-secondary);
+            font-style: italic;
+            cursor: default;
+            transition: all 0.4s;
         }
     }
 
-    p {
-        position: absolute;
-        transition: all 0.4s;
-        color: var(--text-secondary);
-        font-style: italic;
-        cursor: default;
-        
-        &[data-home=true] {
-            font-size: 1rem;
-            top: 49%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        &[data-home=false] {
-            font-size: 0.25rem;
-            top: 3rem;
-            left: 2rem;
-            opacity: 0;
-            visibility: hidden;
-        }
-
-    }
 
     nav {
         transition: all 0.4s;

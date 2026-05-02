@@ -20,10 +20,12 @@ function Root() {
 
     return <>
         <header>
-            <h1 data-home={isHomePage}>
-                {isHomePage ? name[lang] : <NavLink to="/">{name[lang]}</NavLink>}
-            </h1>
-            <p data-home={isHomePage}>{`Frontend ${lang === 'ru' ? 'разработчик' : 'developer'} | React • TypeScript • Redux • Node.js`}</p>
+            <div className="title" data-home={isHomePage}>
+                <h1>
+                    {isHomePage ? name[lang] : <NavLink to="/">{name[lang]}</NavLink>}
+                </h1>
+                <p>{`Frontend ${lang === 'ru' ? 'разработчик' : 'developer'} | React • TypeScript • Redux • Node.js`}</p>
+            </div>
             <nav data-home={isHomePage}>
                 <ul>
                     <li><NavLink to={projectsPath}>{lang === 'ru' ? 'Проекты' : 'Projects'}</NavLink></li>

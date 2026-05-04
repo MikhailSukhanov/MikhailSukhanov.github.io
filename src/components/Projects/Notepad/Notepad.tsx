@@ -74,6 +74,7 @@ function Notepad() {
         <div className={styles.navigation}>
             <div className={styles['search-field']}>
                 <input
+                    aria-label="Notes searching"
                     onChange={e => dispatch(setSearchField(e.target.value))}
                     value={notepadState.searchField}
                     onFocus={() => setIsFocused(true)}
@@ -87,6 +88,7 @@ function Notepad() {
         </div>
         <textarea
             ref={textareaRef}
+            aria-label="Note editing"
             value={getSelectedText(notepadState.selectedNoteId)}
             onChange={e => handleTextAreaChange(e)}
             disabled={!notepadState.selectedNoteId}

@@ -15,7 +15,12 @@ function Note({id, selectedNoteId, text}: NoteProps) {
         dispatch(delNote(id));
     }
 
-    return <div className={styles.container} data-active={id === selectedNoteId} onClick={() => dispatch(setSelectedNoteId(id))}>
+    return <div
+        className={styles.container}
+        data-active={id === selectedNoteId}
+        data-testid="note-item"
+        onClick={() => dispatch(setSelectedNoteId(id))}
+    >
         <button onClick={e => handleDel(e)}>⨯</button>
         <p>{text}</p>
     </div>
